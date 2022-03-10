@@ -1,0 +1,359 @@
+body,
+html {
+  height: 150%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  background: linear-gradient(#042e3b, #096480, #042e3b, #096480);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+  z-index: 2;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 15% 25% 50% 10%;
+  grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  background-color: #ffffff2c;
+  color: #ffffff;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+}
+
+.logo {
+  margin: 0.5rem;
+  padding-top: 5px;
+  padding-left: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #ff7b00;
+}
+.links ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.links li {
+  position: relative;
+  display: flex;
+  height: 30px;
+  padding: 10px 50px 10px 50px;
+  align-items: center;
+  font-size: 110%;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 25px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: #6f848a;
+}
+
+.home-icon {
+  position: relative;
+  padding-right: 10px;
+  width: 30px;
+  height: 26px;
+}
+
+.cart-icon {
+  position: relative;
+  padding-right: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-icon {
+  position: relative;
+  padding-right: 10px;
+  width: 25px;
+  height: 20px;
+}
+
+header {
+  grid-area: header;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 50%;
+  font-size: 100%;
+  padding: 5px;
+  border: 1px solid transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Hentet fra https://www.w3schools.com/howto/howto_css_flip_card.asp Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(#ff7b00, #f0b783, #ff7b00);
+  border: #ffffff solid;
+  color: #096480;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(#096480, #042e3b);
+  color: #ff7b00;
+  border: #ffffff solid;
+  opacity: 80%;
+  font-size: 150%;
+  transform: rotateY(180deg);
+}
+
+.button {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  font-size: 20px;
+  border: #ffffff solid;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button:active {
+  opacity: 30%;
+}
+
+main {
+  grid-area: main;
+  position: relative;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.sealionshow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+#sealionimages {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#sealionimages img {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  border: #ffffff solid;
+}
+
+footer {
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(#096480, #042e3b);
+  width: 100%;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1205px) {
+  nav ul {
+    margin-top: 3%;
+    letter-spacing: 2px;
+    margin-left: 20vh;
+    font-size: 8px;
+  }
+
+  .nav li {
+    position: relative;
+    display: flex;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flip-card {
+    height: 30%;
+    width: 70%;
+    font-size: 80%;
+    padding: 80px;
+    margin-top: -150px;
+  }
+
+  .sealionshow {
+    font-size: 100%;
+    padding: 180px 10px 50px 10px;
+  }
+
+  footer {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    height: 120%;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .dropbtn {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border-style: hidden;
+    z-index: 3;
+    height: 28px;
+    width: 40px;
+  }
+
+  .bar {
+    width: 90%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    border-style: hidden;
+  }
+
+  .dropdown {
+    position: fixed;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 75%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff73;
+    min-width: 80px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .dropdown-content a {
+    color: #000000;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    font-weight: bolder;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    opacity: 70%;
+  }
+
+  .logo {
+    font-size: 100%;
+  }
+
+  .flip-card {
+    height: 30%;
+    width: 70%;
+    font-size: 50%;
+    padding: 70px;
+  }
+
+  .sealionshow {
+    font-size: 50%;
+    padding: 70px 10px 10px 10px;
+  }
+
+  #sealionimages img {
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+  }
+
+  footer {
+    font-size: 50%;
+  }
+}

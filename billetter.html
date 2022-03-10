@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tickets and infopage Sandefjord Akvarium"
+    />
+    <title>Sandefjord Akvarium</title>
+    <link rel="stylesheet" href="styles/billetter.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <a href="index.html"
+          ><div class="logo">
+            <h1>
+              SANDEFJORD <br />
+              AKVARIUM
+            </h1>
+          </div>
+        </a>
+        <div class="links">
+          <ul>
+            <a href="index.html"
+              ><li>
+                <img
+                  class="home-icon"
+                  src="images/icon-home.webp"
+                  alt="icon-home"
+                />
+                Forside
+              </li>
+            </a>
+            <a href="billetter.html"
+              ><li>
+                <img
+                  class="cart-icon"
+                  src="images/icon-cart.png"
+                  alt="icon-cart"
+                />Kjøp billetter
+              </li>
+            </a>
+            <a href="kontaktoss.html">
+              <li>
+                <img
+                  class="contact-icon"
+                  src="images/icon-contact.png"
+                  alt="icon-contact"
+                />Kontakt oss
+              </li>
+            </a>
+          </ul>
+        </div>
+
+        <!---Menu for max-width 600px-->
+        <div class="dropdown">
+          <button class="dropbtn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <div class="dropdown-content">
+            <a href="index.html">Forside</a>
+            <a href="billetter.html">Kjøp billetter</a>
+            <a href="kontaktoss.html">Kontakt oss</a>
+          </div>
+        </div>
+      </nav>
+
+      <header>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Barnebillett</h1>
+              <h2>Pris: 49,-</h2>
+            </div>
+            <div class="flip-card-back">
+              <h3>For barn opp til 12 år!</h3>
+              <form action="Cart/Checkout">
+                <input class="button" type="submit" value="Kjøp billett!" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Ungdomsbillett</h1>
+              <h2>Pris: 79,-</h2>
+            </div>
+            <div class="flip-card-back">
+              <h3>For ungdommer opp til 16 år!</h3>
+              <form action="Cart/Checkout">
+                <input class="button" type="submit" value="Kjøp billett!" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Voksenbillett</h1>
+              <h2>Pris: 99,-</h2>
+            </div>
+            <div class="flip-card-back">
+              <h3>For alle over 18 år!</h3>
+              <form action="Cart/Checkout">
+                <input class="button" type="submit" value="Kjøp billett!" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>
+                Sesongkort <br />
+                for hele familien!
+              </h1>
+              <h2>Pris: 999,-</h2>
+            </div>
+            <div class="flip-card-back">
+              <h3>Ta med hele familien så ofte du vil!</h3>
+              <form action="Cart/Checkout">
+                <input class="button" type="submit" value="Kjøp billett!" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="sealionshow">
+          <h1>VELKOMMEN TIL SJØLØVESHOW</h1>
+          <h2>
+            Hver helg har vi et live show hvor du får se hva sjøløvene har å by
+            på.
+          </h2>
+          <h3>Lørdag: hver 2. time fra kl 10.00</h3>
+          <h3>Søndag: hver time fra kl 11.00</h3>
+        </div>
+        <div id="sealionimages">
+          <img
+            class="sealionshow1"
+            src="images/sealionshow1.webp"
+            alt="sealionsshow1"
+          />
+          <img
+            class="sealionshow2"
+            src="images/sealionshow2.webp"
+            alt="sealionsshow2"
+          />
+          <img
+            class="sealionshow3"
+            src="images/sealionshow3.webp"
+            alt="sealionsshow3"
+          />
+          <img
+            class="sealionshow4"
+            src="images/sealionshow4.jpeg"
+            alt="sealionsshow4"
+          />
+        </div>
+      </main>
+      <footer>
+        <p>@Copyright</p>
+        <p>
+          Adresse: <br /><br />
+          Sandefjordveien 00,<br />0000 SANDEFJORD
+        </p>
+        <p>
+          Resepsjon: <br /><br />
+          +47 000 00 000
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
