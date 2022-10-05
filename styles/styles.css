@@ -33,7 +33,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 4;
-  background-color: #ffffff80;
+  background-color: #05355054;
 }
 
 .dropdown {
@@ -46,7 +46,7 @@ nav {
   padding-top: 5px;
   padding-left: 30px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 5px;
   text-align: center;
   color: #ff7b00;
@@ -67,7 +67,7 @@ nav {
   padding: 10px 50px 10px 50px;
   align-items: center;
   font-size: 110%;
-  font-weight: bold;
+  font-weight: 300;
   color: #000000;
   border-radius: 25px;
   list-style: none;
@@ -78,7 +78,8 @@ nav a {
 }
 
 li:hover {
-  background-color: #6f848a;
+  background-color: #ffffff;
+  color: #0a0909;
 }
 
 .home-icon {
